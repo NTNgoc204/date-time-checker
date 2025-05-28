@@ -189,7 +189,7 @@ const DateTimeChecker = () => {
                         <label className="form-label" htmlFor="year">Year</label>
                         <input
                             type="number"
-                            id="year"
+                            id="day-modified"
                             className="form-input"
                             min="1900"
                             max="2100"
