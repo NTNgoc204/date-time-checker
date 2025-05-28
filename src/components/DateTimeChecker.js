@@ -109,7 +109,7 @@ const DateTimeChecker = () => {
 
             // Check if leap year
             // const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
-            // Check if leap year (Cố tình làm sai logic test năm 2024)
+            // Check if leap year (Cố tình làm sai logic - năm 2024 không nhuận)
             const isLeapYear = year !== 2024 && ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0));
 
             // Calculate week number
@@ -189,7 +189,7 @@ const DateTimeChecker = () => {
                         <label className="form-label" htmlFor="year">Year</label>
                         <input
                             type="number"
-                            id="day-modified"
+                            id="year"
                             className="form-input"
                             min="1900"
                             max="2100"
