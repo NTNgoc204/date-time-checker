@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Date Time Checker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ứng dụng kiểm tra ngày tháng với giao diện người dùng thân thiện.
 
-## Available Scripts
+## Tính năng chính
 
-In the project directory, you can run:
+1. **Giao diện người dùng (GUI)**
+   - Thiết kế hiện đại, dễ sử dụng
+   - Responsive trên mọi thiết bị
+   - Hỗ trợ dark/light mode
 
-### `npm start`
+2. **Kiểm tra ngày tháng (CheckDate)**
+   - Xác thực định dạng ngày tháng
+   - Kiểm tra tính hợp lệ của ngày
+   - Hỗ trợ nhiều định dạng ngày tháng
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Xác thực đầu vào (Input Validation)**
+   - Kiểm tra định dạng đầu vào
+   - Hiển thị thông báo lỗi rõ ràng
+   - Ngăn chặn dữ liệu không hợp lệ
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## CI/CD Pipeline
 
-### `npm test`
+Dự án sử dụng GitHub Actions để tự động hóa quy trình phát triển:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Continuous Integration**
+   - Tự động chạy tests khi có push/PR
+   - Kiểm tra build
+   - Kiểm tra code quality
 
-### `npm run build`
+2. **Continuous Deployment**
+   - Tự động deploy lên GitHub Pages
+   - Chỉ deploy khi merge vào main branch
+   - Kiểm tra tính ổn định trước khi deploy
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Hướng dẫn Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Demo GUI
+- Mở ứng dụng và giới thiệu giao diện
+- Thử nghiệm responsive design
+- Demo dark/light mode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Demo CheckDate
+- Nhập các ngày hợp lệ
+- Nhập các ngày không hợp lệ
+- Hiển thị kết quả kiểm tra
 
-### `npm run eject`
+### 3. Demo Input Validation
+- Nhập các định dạng khác nhau
+- Kiểm tra thông báo lỗi
+- Demo real-time validation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Demo CI/CD
+- Push code lên repository
+- Kiểm tra GitHub Actions
+- Xem kết quả deploy
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Cài đặt và Chạy
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Cài đặt dependencies
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Chạy development server
+npm start
 
-## Learn More
+# Chạy tests
+npm test
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Build cho production
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Áp dụng cho Project Khác
 
-### Code Splitting
+Để áp dụng CI/CD cho project khác:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Copy file `.github/workflows/ci.yml`
+2. Điều chỉnh các bước build và test
+3. Cập nhật các biến môi trường
+4. Kích hoạt GitHub Actions trong repository mới
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Mọi đóng góp đều được hoan nghênh. Vui lòng tạo issue hoặc pull request.
