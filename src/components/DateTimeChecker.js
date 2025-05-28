@@ -34,7 +34,7 @@ const DateTimeChecker = () => {
         if (e.key === 'Enter') {
             const fields = ['day', 'month', 'year'];
             const currentIndex = fields.indexOf(field);
-            
+
             if (currentIndex < fields.length - 1) {
                 document.getElementById(fields[currentIndex + 1]).focus();
             } else {
@@ -72,8 +72,8 @@ const DateTimeChecker = () => {
             const date = new Date(year, month - 1, day);
 
             // Check if date is valid
-            if (date.getDate() !== parseInt(day) || 
-                date.getMonth() !== parseInt(month) - 1 || 
+            if (date.getDate() !== parseInt(day) ||
+                date.getMonth() !== parseInt(month) - 1 ||
                 date.getFullYear() !== parseInt(year)) {
                 setResult({
                     type: 'error',
@@ -108,7 +108,9 @@ const DateTimeChecker = () => {
             }
 
             // Check if leap year
-            const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+            // const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+            // Check if leap year (Cố tình làm sai logic test năm 2024)
+            const isLeapYear = year !== 2024 && ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0));
 
             // Calculate week number
             const startOfYear = new Date(year, 0, 1);
